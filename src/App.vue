@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HomeView from './views/HomeView.vue'
+</script>
 
 <template>
-  <h1>Welcome to Pulse</h1>
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style scoped></style>
