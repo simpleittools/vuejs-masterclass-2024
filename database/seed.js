@@ -1,6 +1,11 @@
+/* eslink-env node */
 import { faker } from "@faker-js/faker";
 
-const personName = faker.person.fullName()
-const personBio = faker.person.bio()
+import { createClient } from '@supabase/supabase-js'
 
-console.log(`Hi! My name is ${personName}. I am a ${personBio}.`)
+const supabase = createClient(
+  process.env.VITE_SUPABASE_URL,
+  process.env.SERVICE_ROlE_KEY,
+)
+
+console.log(supabase)
